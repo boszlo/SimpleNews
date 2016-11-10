@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :increment_readcount, only: [:show]
 
   # GET /articles
   # GET /articles.json
@@ -74,5 +75,10 @@ class ArticlesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:title, :body, :featured, :readcount, :rating)
+    end
+
+    def increment_readcount
+      @article.readcount += 1
+      @article.save
     end
 end
