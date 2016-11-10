@@ -11,8 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery.raty
+//= require ratyrate
 //= require bootstrap
 //= require froala_editor.min.js
 //= require_tree .

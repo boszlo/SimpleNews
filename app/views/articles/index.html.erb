@@ -15,6 +15,7 @@
         <th>Featured</th>
         <th>Readcount</th>
         <th>Rating</th>
+        <th>Category</th>
         <th>Edit</th>
         <th>Destroy</th>
       </tr>
@@ -26,7 +27,8 @@
         <td><%= truncate article.body, length: 30, omission: "... (continued)" %></td>
         <td><%= article.featured %></td>
         <td><%= article.readcount %></td>
-        <td><%= article.rating %></td>
+        <td><%= rating_for article, 'rating', star: 5, disable_after_rate: false %></td>
+        <td><%= article.category.category_name %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>

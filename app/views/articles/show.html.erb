@@ -24,6 +24,6 @@
   <dd><%= @article.readcount %></dd>
 
   <dt>Rating:</dt>
-  <dd><%= @article.rating %></dd>
+  <dd><%= rating_for @article, 'rating', star: 5, disable_after_rate: false %></dd>
 
 </dl>

@@ -82,6 +82,9 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jquery-turbolinks (2.1.0)
+      railties (>= 3.1.0)
+      turbolinks
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -125,6 +128,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (11.3.0)
+    ratyrate (1.2.2.alpha)
     record_tag_helper (1.0.0)
       actionview (~> 5.x)
     responders (2.3.0)
@@ -181,8 +185,10 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.5)
   jquery-rails
+  jquery-turbolinks
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
+  ratyrate
   record_tag_helper (~> 1.0)
   sass-rails (~> 5.0)
   sqlite3
