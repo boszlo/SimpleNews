@@ -23,7 +23,7 @@
     <tbody>
       <%= content_tag_for(:tr, @articles) do |article| %>
         <td><%= link_to article.title, article_path(article) %></td>
-        <td><%= article.body %></td>
+        <td><%= truncate article.body, length: 30, omission: "... (continued)" %></td>
         <td><%= article.featured %></td>
         <td><%= article.readcount %></td>
         <td><%= article.rating %></td>
