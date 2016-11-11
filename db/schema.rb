@@ -23,23 +23,6 @@ ActiveRecord::Schema.define(version: 20161111141846) do
     t.integer  "category_id"
   end
 
-  create_table "authors", force: :cascade do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.text     "bio"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "authorships", force: :cascade do |t|
-    t.integer  "author_id"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["article_id"], name: "index_authorships_on_article_id"
-    t.index ["author_id"], name: "index_authorships_on_author_id"
-  end
-
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
     t.string   "rateable_type"
