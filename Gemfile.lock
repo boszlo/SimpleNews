@@ -183,6 +183,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  execjs
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks
