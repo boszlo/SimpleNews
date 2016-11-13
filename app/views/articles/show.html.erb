@@ -7,23 +7,26 @@
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
-  <h1>Show article</h1>
+  <h1><%= @article.title %></h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt>Title:</dt>
-  <dd><%= @article.title %></dd>
 
-  <dt>Body:</dt>
-  <dd><%= @article.body %></dd>
+<div class="artcile-content">
 
-  <dt>Featured:</dt>
-  <dd><%= @article.featured %></dd>
+  <p>By <% @article.authors.each do |author| %><%= link_to author, author_path %><% end %></p> 
 
-  <dt>Readcount:</dt>
-  <dd><%= @article.readcount %></dd>
+  <section class="article-body"><%= @article.body %></section>
 
-  <dt>Rating:</dt>
-  <dd><%= rating_for @article, 'rating', star: 5, disable_after_rate: false %></dd>
+  <hr />
 
-</dl>
+  <dl class="dl-horizontal well">
+    <dt>Featured:</dt>
+    <dd><%= @article.featured %></dd>
+
+    <dt>Readcount:</dt>
+    <dd><%= @article.readcount %></dd>
+
+    <dt>Rating:</dt>
+    <dd><%= rating_for @article, 'rating', star: 5, disable_after_rate: false %></dd>
+  </dl>
+</div>
