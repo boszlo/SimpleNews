@@ -33,7 +33,7 @@
         <ul class="nav navbar-nav pull-right">
           <li class="active"><%= link_to "Articles", articles_path %></li>
           <li><%= link_to "Categories", categories_path %></li>
-          <!--<li><a href="#contact">Contact</a></li>-->
+          <li><%= link_to "Authors", authors_path %></li>
           <% if user_signed_in? %>
             <li><a>Signed in as... <%= current_user.email %></a></li>
             <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
