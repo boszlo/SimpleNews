@@ -11,6 +11,7 @@
     <thead>
       <tr>
         <th>Title</th>
+        <th>Authors</th>
         <th>Body</th>
         <th>Featured</th>
         <th>Readcount</th>
@@ -24,6 +25,7 @@
     <tbody>
       <%= content_tag_for(:tr, @articles) do |article| %>
         <td><%= link_to article.title, article_path(article) %></td>
+        <td><% article.authors.each do |author| %><%= link_to author, author_path(author) %><% end %></td> 
         <td><%= truncate article.body, length: 30, omission: "... (continued)" %></td>
         <td><%= article.featured %></td>
         <td><%= article.readcount %></td>
