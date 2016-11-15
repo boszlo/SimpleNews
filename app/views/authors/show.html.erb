@@ -7,27 +7,29 @@
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
-  <h1>Show author</h1>
+  <h1><%= @author %></h1>
 </div>
 
-<dl class="dl-horizontal">
+<div class="row">
+  <% if @author.photo.file.nil? %>
+    <p class="caption"><%= @author.bio %></p>
+  <% else %>
+    <div class="col-md-2">
+      <%= image_tag @author.photo, class: "author-thumb thumbnail" %>
+    </div>
+    <div class="col-md-10">
+      <p class="caption"><%= @author.bio %></p>
+    </div>
+  <% end %>
+</div>
 
-  <dt>Firstname:</dt>
-  <dd><%= @author.firstname %></dd>
+<hr />
 
-
-  <dt>Lastname:</dt>
-  <dd><%= @author.lastname %></dd>
-
-
-  <dt>Bio:</dt>
-  <dd><%= @author.bio %></dd>
-
+<dl class="dl-horizontal well">
   <dt>Articles:</dt>
   <dd><ul>
     <% @author.articles.each do |article| %>
       <li><%= link_to article.title, article_path(article) %></li>
     <% end %>
   </ul></dd>
-  
 </dl>

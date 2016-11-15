@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .author-thumb {
+    width: 140px;
+ }

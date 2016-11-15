@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'ratyrate'
 gem 'jquery-turbolinks'
 gem 'execjs'
+gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
