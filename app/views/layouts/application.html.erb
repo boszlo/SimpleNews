@@ -38,7 +38,7 @@
             <li><a>Signed in as... <%= current_user.email %></a></li>
             <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
           <% else %>
-            <li><%= link_to "Sign in", new_user_session_path %></li>
+            <li><%= link_to "Sign in", "#sign-in-modal", "data-toggle" => "modal" %></li>
           <% end %>
         </ul>
       </div>
@@ -54,5 +54,7 @@
 
     <%= yield %>
   </div>
+  <%= render "modals/sign_up" %>
+  <%= render "modals/sign_in" %>
 </body>
 </html>
