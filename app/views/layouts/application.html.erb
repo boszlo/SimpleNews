@@ -54,7 +54,9 @@
 
     <%= yield %>
   </div>
-  <%= render "modals/sign_up" %>
-  <%= render "modals/sign_in" %>
+  <% if not user_signed_in? %>
+    <%= render "modals/sign_up" %>
+    <%= render "modals/sign_in" %>
+  <% end %>
 </body>
 </html>
