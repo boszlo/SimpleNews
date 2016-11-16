@@ -26,7 +26,7 @@
       <%= content_tag_for(:tr, @articles) do |article| %>
         <td><%= link_to article.title, article_path(article) %></td>
         <td><% article.authors.each do |author| %><%= link_to author, author_path(author) %><% end %></td> 
-        <td><%= truncate article.body, length: 30, omission: "... (continued)" %></td>
+        <td><%= raw article.body.truncate 30 %></td>
         <td><%= article.featured %></td>
         <td><%= article.readcount %></td>
         <td><%= rating_for article, 'rating', star: 5, disable_after_rate: false %></td>

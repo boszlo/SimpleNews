@@ -15,7 +15,7 @@
 
   <p>By <% @article.authors.each do |author| %><%= link_to author, author_path %><% end %></p> 
 
-  <section class="article-body"><%= @article.body %></section>
+  <section class="article-body"><%= raw @article.body %></section>
 
   <hr />
 
