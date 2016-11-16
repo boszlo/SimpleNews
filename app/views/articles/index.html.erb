@@ -1,5 +1,5 @@
 <div class="page-header">
-  <%= link_to new_article_path, class: 'btn btn-primary' do %>
+  <%= link_to new_article_path, class: 'btn btn-primary', require_login: true do %>
     <span class="glyphicon glyphicon-plus"></span>
     New Article
   <% end %>
@@ -31,8 +31,8 @@
         <td><%= article.readcount %></td>
         <td><%= rating_for article, 'rating', star: 5, disable_after_rate: false %></td>
         <td><% if defined? article.category.category_name %><%= article.category.category_name %><% end %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_article_path(article), require_login: true %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, require_login: true %></td>
       <% end %>
     </tbody>
   </table>

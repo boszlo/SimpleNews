@@ -23,6 +23,9 @@
     <dt>Featured:</dt>
     <dd><%= @article.featured %></dd>
 
+    <dt>Published:</dt>
+    <dd><%= time_ago_in_words(@article.created_at) %> ago</dd>
+
     <dt>Readcount:</dt>
     <dd><%= @article.readcount %></dd>
 
