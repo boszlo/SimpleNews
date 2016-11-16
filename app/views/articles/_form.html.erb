@@ -52,7 +52,7 @@
     
       <%= f.label :rating, class: "col-sm-2 control-label" %>
       <div class="col-sm-10">
-        <%= f.number_field :rating, class: "form-control" %>
+        <%= rating_for @article, 'rating', star: 5, disable_after_rate: false %>
       </div>
     
   </div>
