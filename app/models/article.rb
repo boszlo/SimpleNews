@@ -4,4 +4,5 @@ class Article < ApplicationRecord
   has_many :authors, through: :authorships
   validates_presence_of [:body, :title, :readcount]
   ratyrate_rateable "rating"
+  mount_uploader :photo, PhotoUploader
 end

@@ -12,8 +12,12 @@
 
 
 <div class="artcile-content">
-
   <p>By <% @article.authors.each do |author| %><%= link_to author, author_path %><% end %></p> 
+
+  <% if not @article.photo.file.nil? %>
+    <%= image_tag @article.photo, class: "img-responsive" %>
+    <hr />
+  <% end %>
 
   <section class="article-body"><%= raw @article.body %></section>
 
