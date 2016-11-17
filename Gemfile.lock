@@ -57,6 +57,8 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    ckeditor_rails (4.5.10)
+      railties (>= 3.0)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -186,6 +188,7 @@ DEPENDENCIES
   bootstrap-generators!
   byebug
   carrierwave (>= 1.0.0.rc, < 2.0)
+  ckeditor_rails
   coffee-rails (~> 4.2)
   devise
   execjs

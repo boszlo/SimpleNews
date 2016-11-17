@@ -12,8 +12,12 @@
 
 
 <div class="artcile-content">
-
   <p>By <% @article.authors.each do |author| %><%= link_to author, author_path %><% end %></p> 
+
+  <% if not @article.photo.file.nil? %>
+    <%= image_tag @article.photo, class: "img-responsive" %>
+    <hr />
+  <% end %>
 
   <section class="article-body"><%= raw @article.body %></section>
 
@@ -22,6 +26,9 @@
   <dl class="dl-horizontal well">
     <dt>Featured:</dt>
     <dd><%= @article.featured %></dd>
+
+    <dt>Published:</dt>
+    <dd><%= time_ago_in_words(@article.created_at) %> ago</dd>
 
     <dt>Readcount:</dt>
     <dd><%= @article.readcount %></dd>

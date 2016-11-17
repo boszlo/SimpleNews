@@ -24,7 +24,7 @@
     
       <%= f.label :body, class: "col-sm-2 control-label" %>
       <div class="col-sm-10">
-        <%= f.text_area :body, class: "form-control" %>
+        <%= f.text_area :body, class: "form-control ckeditor" %>
       </div>
     
   </div>
@@ -52,7 +52,7 @@
     
       <%= f.label :rating, class: "col-sm-2 control-label" %>
       <div class="col-sm-10">
-        <%= f.number_field :rating, class: "form-control" %>
+        <%= rating_for @article, 'rating', star: 5, disable_after_rate: false %>
       </div>
     
   </div>
@@ -65,6 +65,16 @@
       </div>
 
   </div>
+
+  <div class="form-group">
+    
+    <%= f.label :photo, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.file_field :photo %>
+      <%= f.hidden_field :photo_cache %>
+    </div>
+  </div>
+
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <%= f.submit class: "btn btn-primary" %>
