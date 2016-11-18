@@ -37,6 +37,8 @@ gem 'jquery-turbolinks'
 gem 'execjs'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 gem 'ckeditor_rails'
+#required for imagemagick that needs to be installed!!!
+gem 'mini_magick', :git => 'git://github.com/minimagick/minimagick.git'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -15,7 +15,7 @@
     <p class="caption"><%= @author.bio %></p>
   <% else %>
     <div class="col-md-2">
-      <%= image_tag @author.photo, class: "author-thumb thumbnail" %>
+      <%= image_tag @author.photo.thumb.url, class: "author-thumb thumbnail" %>
     </div>
     <div class="col-md-10">
       <p class="caption"><%= @author.bio %></p>

@@ -6,6 +6,12 @@ GIT
       railties (>= 3.1.0)
 
 GIT
+  remote: git://github.com/minimagick/minimagick.git
+  revision: 53befdfdc778b188c50cc894d8f75cef254a83c3
+  specs:
+    mini_magick (4.5.1)
+
+GIT
   remote: https://github.com/codahale/bcrypt-ruby.git
   revision: 23b0517e20e7ddf2e733c1bcdb22b0b12166f042
   specs:
@@ -195,6 +201,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks
+  mini_magick!
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   ratyrate
