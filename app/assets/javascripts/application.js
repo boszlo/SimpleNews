@@ -19,3 +19,4 @@
 //= require bootstrap
 //= require froala_editor.min.js
 //= require_tree .
+//= require custom
