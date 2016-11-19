@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require ckeditor-jquery
 //= require jquery.raty
 //= require ratyrate

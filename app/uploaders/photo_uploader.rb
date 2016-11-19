@@ -30,9 +30,14 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # end
   # CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
   # Create different versions of your uploaded files:
-  version :thumb do
+  version :panel do
+    process resize_to_fill: [400,400]
+  end
+
+  version :thumb, from_version: :panel do
     process resize_to_fill: [250, 400]
   end
+
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
