@@ -1,7 +1,7 @@
 
 <% if authors.size > 0 %>By <% end %>
 <% authors.each_with_index do |author, index| %>
-  <%= link_to author, author_path(author) %>
+  <%= link_to author, author_path(author), require_login: true %>
   <% if index + 1 == authors.count - 1 %>
     and
   <% elsif index + 1 != authors.count %>

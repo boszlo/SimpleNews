@@ -40,6 +40,7 @@ gem 'ckeditor_rails'
 #required for imagemagick that needs to be installed!!!
 gem 'mini_magick', :git => 'git://github.com/minimagick/minimagick.git'
 gem 'masonry-rails', '~> 0.2.4'
+gem "omniauth-google-oauth2"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

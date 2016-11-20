@@ -1,5 +1,5 @@
 <div class="page-header">
-  <%= link_to new_author_path, class: 'btn btn-primary' do %>
+  <%= link_to new_author_path, class: 'btn btn-primary', require_login: true do %>
     <span class="glyphicon glyphicon-plus"></span>
     New Author
   <% end %>
@@ -32,9 +32,9 @@
     
         <td><%= author.bio %></td>
     
-        <td><%= link_to 'Show', author %></td>
-        <td><%= link_to 'Edit', edit_author_path(author) %></td>
-        <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', author, require_login: true %></td>
+        <td><%= link_to 'Edit', edit_author_path(author), require_login: true %></td>
+        <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' }, require_login: true %></td>
       <% end %>
     </tbody>
   </table>
