@@ -1,5 +1,5 @@
 
-By 
+<% if authors.size > 0 %>By <% end %>
 <% authors.each_with_index do |author, index| %>
   <%= link_to author, author_path(author) %>
   <% if index + 1 == authors.count - 1 %>

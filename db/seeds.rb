@@ -34,10 +34,18 @@ article_list.each do |title, body, featured, readcount, rating, category_id|
   Article.create(title: title, body: body, featured: featured, readcount: readcount, rating: rating, category_id: category_id)
 end
 
-# add images
+
+# for each article find unique image
+photos = {}
+
 Article.all.each do |article|
-  article.photo = File.open(Rails.root + "app/assets/images/jungle.jpg")
-  article.save!
+  Dir.glob('app/assets/images/seed-images/*.jpg').each do |jpg|
+    next if photos.key?(article.id)
+    next if photos.has_value?(jpg)
+    photos[article.id] = jpg
+    article.photo = File.open(jpg)
+    article.save!
+  end
 end
 
 # add authors
@@ -46,13 +54,10 @@ Article.all.each_with_index do |article, index|
   article.authors << Author.find(index)
 end
 
+# add second author to first article
+Article.first.authors << Author.last
 
-# set user
-user = User.new
-user.email = 'test@test.com'
-user.password = 'qweasd12'
-user.save!
-
+puts photos
 puts "Seed planted!"
 
 
