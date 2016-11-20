@@ -5,8 +5,7 @@
 $('.ckeditor').ckeditor {}
 
 $ ->
-	$('#pins').imagesLoaded ->
-		console.log('loaded')
+	$('#masonry-container').imagesLoaded ->
 		$('#masonry-container').masonry
 	    	itemSelector: '.box'
 	    	isFitWidth: true
