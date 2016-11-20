@@ -18,7 +18,7 @@ Category.create(category_name: "Features")
   featured = index.odd? ? true : false
   category_id = index.odd? ? 1 : 2
   body = "<p>#{Forgery('lorem_ipsum').paragraphs(20)}</p>" * 10
-  Article.create(title: Forgery('lorem_ipsum').words(3), body: body, featured: featured, readcount: 0, rating: 0, category_id: category_id)
+  Article.create(title: Forgery('lorem_ipsum').words(2), body: body, featured: featured, readcount: 0, rating: 0, category_id: category_id)
 end
 
 
