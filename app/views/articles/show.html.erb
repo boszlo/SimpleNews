@@ -12,7 +12,7 @@
 
 
 <div class="artcile-content">
-  <p>By <% @article.authors.each do |author| %><%= link_to author, author_path %><% end %></p> 
+  <p><%= render partial: "byline", locals: {authors: @article.authors} %></p> 
 
   <% if not @article.photo.file.nil? %>
     <%= image_tag @article.photo, class: "img-responsive" %>

@@ -13,14 +13,14 @@
     <%= link_to (image_tag article.photo.panel.url, class: 'img-responsive'), article_path(article) if not article.photo.panel.url.nil? %>
     <div class="panel-body">
       <h2><%= link_to article.title, article_path(article) %></h2>
-      <h4><% article.authors.each do |author| %><%= link_to author, author_path(author) %><% end %></h4> 
+      <h4><%= render partial: "byline", locals: {authors: article.authors} %></h4> 
       <%= raw article.body.truncate 80 %>
     </div>
     <div class="panel-footer">
-      <%= article.featured %><br />
-      <%= article.readcount %><br />
+<!--       <%= article.featured %><br />
+      <%= article.readcount %><br /> -->
       <%= rating_for article, 'rating', star: 5, disable_after_rate: false %>
-      <% if defined? article.category.category_name %><%= article.category.category_name %><br /><% end %>
+      <% if defined? article.category.category_name %>Category: <%= article.category.category_name %><br /><% end %>
       <%= link_to 'Edit', edit_article_path(article), require_login: true %>
       <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, require_login: true %>
     </div>

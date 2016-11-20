@@ -1,0 +1,10 @@
+
+By 
+<% authors.each_with_index do |author, index| %>
+  <%= link_to author, author_path(author) %>
+  <% if index + 1 == authors.count - 1 %>
+    and
+  <% elsif index + 1 != authors.count %>
+    ,
+  <% end %>
+<% end %>
