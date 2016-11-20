@@ -34,7 +34,7 @@
         <ul class="nav navbar-nav pull-right">
           <li class="<%= 'active' if current_page?(articles_path) %>"><%= link_to "Articles", articles_path %></li>
           <li class="<%= 'active' if current_page?(categories_path) %>"><%= link_to "Categories", categories_path %></li>
-          <li class="<%= 'active' if current_page?(authors_path) %>"><%= link_to "Authors", authors_path %></li>
+          <li class="<%= 'active' if current_page?(authors_path) %>"><%= link_to "Authors", authors_path, require_login: true %></li>
           <% if user_signed_in? %>
             <li><a><abbr title="Signed in as"> <%= current_user.email %></abbr></a></li>
             <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
