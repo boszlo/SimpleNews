@@ -8,7 +8,7 @@
 
 
 (0..15).each do |index|
-  Author.create( firstname: Forgery('name').first_name, lastname: Forgery('name').last_name, bio: Forgery('lorem_ipsum').paragraph )
+  Author.create( firstname: Forgery('name').first_name, lastname: Forgery('name').last_name, bio: Forgery('lorem_ipsum').paragraphs(3) )
 end
 
 Category.create(category_name: "News")
@@ -17,7 +17,7 @@ Category.create(category_name: "Features")
 (0..15).each do |index|
   featured = index.odd? ? true : false
   category_id = index.odd? ? 1 : 2
-  Article.create(title: Forgery('lorem_ipsum').title, body: Forgery('lorem_ipsum').paragraphs, featured: featured, readcount: 0, rating: 0, category_id: category_id)
+  Article.create(title: Forgery('lorem_ipsum').title, body: Forgery('lorem_ipsum').paragraphs(10), featured: featured, readcount: 0, rating: 0, category_id: category_id)
 end
 
 
