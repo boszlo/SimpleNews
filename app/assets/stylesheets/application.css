@@ -20,6 +20,7 @@
 	font-weight: 100;
 	font-family: 'Open Sans', sans-serif;
   min-width: 430px;
+  background-color: #eaeaea;
 }
 
  .author-thumb {
@@ -36,7 +37,6 @@
 
 
 #masonry-container {
-  background: #FFF;
   border-radius: 5px;
   clear: both;
   -webkit-border-radius: 5px;
