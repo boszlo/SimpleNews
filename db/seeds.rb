@@ -32,14 +32,13 @@ Article.all.each do |article|
     article.save!
 end
 
-# add authors
+# add 2 authors to each article
 Article.all.each_with_index do |article, index|
   index += 1
   article.authors << Author.find(index)
+  article.authors << Author.all[-index]
 end
 
-# add second author to first article
-Article.first.authors << Author.last
 
 puts "Seed planted!"
 
