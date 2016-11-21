@@ -31,7 +31,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
   # Create different versions of your uploaded files:
   version :panel do
-    process resize_to_fill: [400,400]
+    process resize_to_fill: [560,300]
   end
 
   version :thumb, from_version: :panel do

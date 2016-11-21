@@ -19,6 +19,7 @@
  body {
 	font-weight: 100;
 	font-family: 'Open Sans', sans-serif;
+  min-width: 430px;
 }
 
  .author-thumb {
@@ -41,6 +42,9 @@
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
+  margin-left:auto;
+  margin-right: auto;
+  position: relative;
 }
 
 .clearfix:before, .clearfix:after { content: ""; display: table; }
@@ -48,7 +52,7 @@
 .clearfix { zoom: 1; }
 
 .box {
-	width: 260px;
+	width: 366px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
     border-radius: 7px;
     text-align: center;
@@ -61,3 +65,9 @@
 .google-sign-in {
   width: 250px;
 }
+
+/*@media screen and (max-width: 1201px) {
+  .box {
+    width: 300px;
+  }
+}*/

@@ -9,6 +9,5 @@ $ ->
 		$('#masonry-container').masonry
 	    	itemSelector: '.box'
 	    	isFitWidth: true
-	    	columnWidth: 250,
-    		gutterWidth: 42
+    		gutterWidth: 20
 

@@ -1,8 +1,8 @@
 <%= link_to (image_tag article.photo.panel.url, class: 'img-responsive'), article_path(article) if not article.photo.panel.url.nil? %>
 <div class="panel-body">
   <h2><%= link_to article.title, article_path(article) %></h2>
-  <h4><%= render partial: "byline", locals: {authors: article.authors} %></h4> 
-  <%= raw article.body.truncate 80 %>
+  <p><%= render partial: "byline", locals: {authors: article.authors} %></p> 
+  <!--<%= raw article.body.truncate 80 %>-->
 </div>
 <div class="panel-footer">
   <%= rating_for article, 'rating', star: 5, disable_after_rate: false %>
