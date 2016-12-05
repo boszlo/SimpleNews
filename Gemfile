@@ -41,6 +41,7 @@ gem 'ckeditor_rails'
 gem 'mini_magick', :git => 'git://github.com/minimagick/minimagick.git'
 gem 'masonry-rails', '~> 0.2.4'
 gem "omniauth-google-oauth2"
+gem 'to_words'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
