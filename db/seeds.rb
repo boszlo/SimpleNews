@@ -25,12 +25,16 @@ end
 
 # for each article find unique image
 photos = Dir.glob('app/assets/images/seed-images/*.jpg').compact
+counter = 0
 
 Article.all.each do |article|
-    random = Random.new.rand(0...photos.size)
-    jpg = photos[random]
-    article.photo = File.open(jpg) 
-    article.save!
+  #random = Random.new.rand(0...photos.size)
+  #jpg = photos[random]
+  counter = counter < photos.size ? counter : 0
+  jpg = photos[counter]
+  article.photo = File.open(jpg) 
+  article.save!
+  counter += 1
 end
 
 # add 2 authors to each article
