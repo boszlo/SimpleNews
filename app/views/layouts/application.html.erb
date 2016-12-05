@@ -42,6 +42,7 @@
             <li><%= link_to "Log in", "#sign-in-modal", "data-toggle" => "modal" %></li>
             <li><%= link_to "Sign up", "#sign-up-modal", "data-toggle" => "modal" %></li>
           <% end %>
+          <li class="<%= 'active' if current_page?(search_path) %>"><%= link_to "Search", search_path %></li>
         </ul>
       </div>
     </div>
