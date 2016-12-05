@@ -71,3 +71,7 @@
     width: 300px;
   }
 }*/
+
+#search-page em {
+  background-color: yellow;
+}

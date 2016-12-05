@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :articles
   resources :categories
   root to: 'articles#index'
+  get 'search', to: 'search#search'
 end
