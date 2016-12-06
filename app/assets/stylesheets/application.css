@@ -21,6 +21,18 @@
 	font-family: 'Open Sans', sans-serif;
   min-width: 430px;
   background-color: #eaeaea;
+  background-image: url("squairy_light.png");
+  background-repeat: repeat;
+}
+
+.article-body {
+    padding: 10px 100px;
+    text-align: justify;
+    font-size: large;
+}
+
+.article-byline {
+  margin-bottom: 22px;
 }
 
  .author-thumb {
@@ -76,4 +88,15 @@
   background-color: yellow;
 }
 
+.page-header {
+  border-bottom: 1px solid #ccc;
+}
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+}

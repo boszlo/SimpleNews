@@ -12,7 +12,7 @@
 
 
 <div class="artcile-content">
-  <p><%= render partial: "byline", locals: {authors: @article.authors} %></p> 
+  <h4 class="article-byline"><%= render partial: "byline", locals: {authors: @article.authors} %></h4> 
 
   <% if not @article.photo.file.nil? %>
     <%= image_tag @article.photo, class: "img-responsive" %>
