@@ -14,4 +14,16 @@ $(document).ready( function() {
       $(this).closest('form').submit();
     }
   });
+
+  $('#navbar-search').on('focus', function() {
+    $(this).css('background-color', 'white');
+    $(this).css('border', '1px solid #CCC');
+  });
+
+  $('#navbar-search').on('blur', function() {
+    if($(this).val() == '') {
+      $(this).css('background-color', '#4c4c4c');
+      $(this).css('border', '1px solid black');
+    }
+  });
 });
